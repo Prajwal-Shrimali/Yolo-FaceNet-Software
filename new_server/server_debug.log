@@ -1,0 +1,1120 @@
+2025-04-04 12:05:05,354 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:05:05,354 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:05:05,354 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:05:05,354 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:05:05,354 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:05:05,434 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:05:05,434 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:05:05,465 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:05:05,465 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:05:05,465 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:06:28,508 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < Sec-WebSocket-Key: 4lBN6VfA7eqBJPcru3O1Ew==
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:36:28 GMT
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > Sec-WebSocket-Accept: w+2j6bGXlmoqcAv/3SxtLPr8lNU=
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:06:28,513 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:06:28,513 - websockets.server - INFO - connection open
+2025-04-04 12:06:28,513 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:06:28,525 - websockets.server - DEBUG - < TEXT '{"type": "registration", "image": "/9j/4AAQSkZJ...al", "role": "Patient"}' [22759 bytes]
+2025-04-04 12:06:28,525 - FaceAuthServer - INFO - Received message type: registration
+2025-04-04 12:06:28,526 - FaceAuthServer - DEBUG - Processing registration request
+2025-04-04 12:06:28,526 - FaceAuthServer - INFO - Processing registration request
+2025-04-04 12:06:28,526 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:06:28,527 - FaceAuthServer - DEBUG - Image decoded successfully: (257, 203, 3)
+2025-04-04 12:06:28,527 - FaceAuthServer - DEBUG - Saving image to: faceDB\PATIENTS\PAT_002_Prajwal.jpg
+2025-04-04 12:06:28,527 - FaceAuthServer - DEBUG - Logging authentication: PAT_002 -> None, register, New Patient registered: Prajwal
+2025-04-04 12:06:28,534 - FaceAuthServer - ERROR - Error logging authentication: 1048 (23000): Column 'patient_id' cannot be null
+2025-04-04 12:06:28,540 - FaceAuthServer - INFO - Registration successful: PAT_002
+2025-04-04 12:06:28,540 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'message': 'Successfully registered as Patient with ID: PAT_002'}
+2025-04-04 12:06:28,541 - websockets.server - DEBUG - > TEXT '{"status": "success", "message": "Successfully ...ient with ID: PAT_002"}' [87 bytes]
+2025-04-04 12:06:28,543 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:06:28,543 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:06:28,543 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:06:28,543 - websockets.server - DEBUG - > EOF
+2025-04-04 12:06:28,543 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:06:28,544 - websockets.server - DEBUG - < EOF
+2025-04-04 12:06:28,544 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:07:06,337 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < Sec-WebSocket-Key: 4SjGPnansOAKEdflKKZjDg==
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:07:06,340 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:37:06 GMT
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > Sec-WebSocket-Accept: wIygBJt3eOySEQuWsIruq8fL+k4=
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:07:06,341 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:07:06,341 - websockets.server - INFO - connection open
+2025-04-04 12:07:06,341 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:07:06,344 - websockets.server - DEBUG - < TEXT '{"type": "registration", "image": "/9j/4AAQSkZJ...ani", "role": "Doctor"}' [18361 bytes]
+2025-04-04 12:07:06,345 - FaceAuthServer - INFO - Received message type: registration
+2025-04-04 12:07:06,345 - FaceAuthServer - DEBUG - Processing registration request
+2025-04-04 12:07:06,345 - FaceAuthServer - INFO - Processing registration request
+2025-04-04 12:07:06,345 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:07:06,346 - FaceAuthServer - DEBUG - Image decoded successfully: (192, 163, 3)
+2025-04-04 12:07:06,346 - FaceAuthServer - DEBUG - Saving image to: faceDB\DOCTORS\DOC_003_Ishani.jpg
+2025-04-04 12:07:06,347 - FaceAuthServer - DEBUG - Logging authentication: DOC_003 -> None, register, New Doctor registered: Ishani
+2025-04-04 12:07:06,347 - FaceAuthServer - ERROR - Error logging authentication: 1048 (23000): Column 'patient_id' cannot be null
+2025-04-04 12:07:06,348 - FaceAuthServer - INFO - Registration successful: DOC_003
+2025-04-04 12:07:06,348 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'message': 'Successfully registered as Doctor with ID: DOC_003'}
+2025-04-04 12:07:06,348 - websockets.server - DEBUG - > TEXT '{"status": "success", "message": "Successfully ...ctor with ID: DOC_003"}' [86 bytes]
+2025-04-04 12:07:06,350 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:07:06,350 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:07:06,350 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:07:06,350 - websockets.server - DEBUG - > EOF
+2025-04-04 12:07:06,351 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:07:06,351 - websockets.server - DEBUG - < EOF
+2025-04-04 12:07:06,351 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:11:47,781 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:11:47,781 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:11:47,781 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:11:47,781 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:11:47,781 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:11:47,798 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:11:47,799 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:11:47,811 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:11:47,813 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:11:47,813 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:13:32,164 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < Sec-WebSocket-Key: egfskP3W0USoGZL++hWLvQ==
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:13:32,166 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:43:32 GMT
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > Sec-WebSocket-Accept: lVj4zboWMh0B5j1xecibpo4wFgg=
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:13:32,167 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:13:32,168 - websockets.server - INFO - connection open
+2025-04-04 12:13:32,168 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:13:32,173 - websockets.server - DEBUG - < TEXT '{"type": "authentication", "doctor_image": "/9j.../AKtf90UUUV7T3Pjj/9k="}' [47283 bytes]
+2025-04-04 12:13:32,174 - FaceAuthServer - INFO - Received message type: authentication
+2025-04-04 12:13:32,174 - FaceAuthServer - DEBUG - Processing authentication request
+2025-04-04 12:13:32,174 - FaceAuthServer - INFO - Processing authentication request
+2025-04-04 12:13:32,174 - FaceAuthServer - DEBUG - Converting doctor image from base64
+2025-04-04 12:13:32,174 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:13:32,175 - FaceAuthServer - DEBUG - Image decoded successfully: (272, 218, 3)
+2025-04-04 12:13:32,175 - FaceAuthServer - DEBUG - Converting patient image from base64
+2025-04-04 12:13:32,175 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:13:32,175 - FaceAuthServer - DEBUG - Image decoded successfully: (209, 178, 3)
+2025-04-04 12:13:32,177 - FaceAuthServer - INFO - Saved doctor debug image to: faceDB\debug\debug_doctor_20250404_121332.jpg
+2025-04-04 12:13:32,177 - FaceAuthServer - INFO - Saved patient debug image to: faceDB\debug\debug_patient_20250404_121332.jpg
+2025-04-04 12:13:32,177 - FaceAuthServer - INFO - Verifying doctor's face
+2025-04-04 12:13:32,177 - FaceAuthServer - INFO - Verifying Doctor face
+2025-04-04 12:13:32,177 - FaceAuthServer - DEBUG - Saving temporary image to: faceDB\temp.jpg
+2025-04-04 12:13:32,178 - FaceAuthServer - DEBUG - Searching in folder: faceDB\DOCTORS
+2025-04-04 12:13:32,178 - FaceAuthServer - DEBUG - Running DeepFace.find with model: Facenet
+2025-04-04 12:13:34,296 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2025-04-04 12:13:39,054 - FaceAuthServer - DEBUG - Temporary file removed
+2025-04-04 12:13:39,054 - FaceAuthServer - INFO - Best match similarity: 0.695
+2025-04-04 12:13:39,054 - FaceAuthServer - WARNING - Best match similarity too low: 0.695
+2025-04-04 12:13:39,054 - FaceAuthServer - WARNING - Doctor verification failed
+2025-04-04 12:13:39,054 - FaceAuthServer - DEBUG - Sending response: {'status': 'error', 'message': 'Doctor verification failed'}
+2025-04-04 12:13:39,054 - websockets.server - DEBUG - > TEXT '{"status": "error", "message": "Doctor verification failed"}' [60 bytes]
+2025-04-04 12:13:39,056 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:13:39,056 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:13:39,056 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:13:39,056 - websockets.server - DEBUG - > EOF
+2025-04-04 12:13:39,057 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:13:39,057 - websockets.server - DEBUG - < EOF
+2025-04-04 12:13:39,057 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:13:48,689 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:13:48,690 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:13:48,690 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:13:48,690 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:13:48,691 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:13:48,691 - websockets.server - DEBUG - < Sec-WebSocket-Key: ioiFcjMoCCgJfq6CIcZ0tg==
+2025-04-04 12:13:48,691 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:13:48,691 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:13:48,691 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:13:48,691 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:13:48,692 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:43:48 GMT
+2025-04-04 12:13:48,692 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:13:48,692 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:13:48,692 - websockets.server - DEBUG - > Sec-WebSocket-Accept: YfMifHSfzHtt9X9jNo5/n60Fhz8=
+2025-04-04 12:13:48,692 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:13:48,692 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:13:48,693 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:13:48,693 - websockets.server - INFO - connection open
+2025-04-04 12:13:48,693 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:13:48,697 - websockets.server - DEBUG - < TEXT '{"type": "authentication", "doctor_image": "/9j.../AKtf90UUUV7T3Pjj/9k="}' [47671 bytes]
+2025-04-04 12:13:48,697 - FaceAuthServer - INFO - Received message type: authentication
+2025-04-04 12:13:48,697 - FaceAuthServer - DEBUG - Processing authentication request
+2025-04-04 12:13:48,697 - FaceAuthServer - INFO - Processing authentication request
+2025-04-04 12:13:48,698 - FaceAuthServer - DEBUG - Converting doctor image from base64
+2025-04-04 12:13:48,698 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:13:48,698 - FaceAuthServer - DEBUG - Image decoded successfully: (273, 215, 3)
+2025-04-04 12:13:48,698 - FaceAuthServer - DEBUG - Converting patient image from base64
+2025-04-04 12:13:48,698 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:13:48,698 - FaceAuthServer - DEBUG - Image decoded successfully: (209, 178, 3)
+2025-04-04 12:13:48,699 - FaceAuthServer - INFO - Saved doctor debug image to: faceDB\debug\debug_doctor_20250404_121348.jpg
+2025-04-04 12:13:48,700 - FaceAuthServer - INFO - Saved patient debug image to: faceDB\debug\debug_patient_20250404_121348.jpg
+2025-04-04 12:13:48,700 - FaceAuthServer - INFO - Verifying doctor's face
+2025-04-04 12:13:48,700 - FaceAuthServer - INFO - Verifying Doctor face
+2025-04-04 12:13:48,700 - FaceAuthServer - DEBUG - Saving temporary image to: faceDB\temp.jpg
+2025-04-04 12:13:48,701 - FaceAuthServer - DEBUG - Searching in folder: faceDB\DOCTORS
+2025-04-04 12:13:48,701 - FaceAuthServer - DEBUG - Running DeepFace.find with model: Facenet
+2025-04-04 12:13:48,883 - FaceAuthServer - DEBUG - Temporary file removed
+2025-04-04 12:13:48,883 - FaceAuthServer - INFO - Best match similarity: 0.701
+2025-04-04 12:13:48,883 - FaceAuthServer - DEBUG - Matched with file: DOC_002_PrajwalShrimali.jpeg
+2025-04-04 12:13:48,884 - FaceAuthServer - INFO - Face verified: PrajwalShrimali (DOC_002)
+2025-04-04 12:13:48,884 - FaceAuthServer - INFO - Verifying patient's face
+2025-04-04 12:13:48,884 - FaceAuthServer - INFO - Verifying Patient face
+2025-04-04 12:13:48,884 - FaceAuthServer - DEBUG - Saving temporary image to: faceDB\temp.jpg
+2025-04-04 12:13:48,884 - FaceAuthServer - DEBUG - Searching in folder: faceDB\PATIENTS
+2025-04-04 12:13:48,885 - FaceAuthServer - DEBUG - Running DeepFace.find with model: Facenet
+2025-04-04 12:13:49,847 - FaceAuthServer - DEBUG - Temporary file removed
+2025-04-04 12:13:49,848 - FaceAuthServer - INFO - Best match similarity: 0.856
+2025-04-04 12:13:49,848 - FaceAuthServer - DEBUG - Matched with file: PAT_001_Ishani.jpeg
+2025-04-04 12:13:49,848 - FaceAuthServer - INFO - Face verified: Ishani (PAT_001)
+2025-04-04 12:13:49,848 - FaceAuthServer - DEBUG - Patient ID: PAT_001
+2025-04-04 12:13:49,848 - FaceAuthServer - DEBUG - Checking access for date: 2025-04-04
+2025-04-04 12:13:49,848 - FaceAuthServer - DEBUG - Checking access: DOC_002 -> PAT_001 on 2025-04-04
+2025-04-04 12:13:49,860 - FaceAuthServer - INFO - Access check result: Granted
+2025-04-04 12:13:49,860 - FaceAuthServer - DEBUG - Logging authentication attempt
+2025-04-04 12:13:49,860 - FaceAuthServer - DEBUG - Logging authentication: DOC_002 -> PAT_001, verify, Access granted
+2025-04-04 12:13:49,870 - FaceAuthServer - INFO - Authentication logged successfully
+2025-04-04 12:13:49,871 - FaceAuthServer - INFO - Access granted: Dr. PrajwalShrimali with Ishani
+2025-04-04 12:13:49,871 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'message': 'Access granted: Dr. PrajwalShrimali with Ishani'}
+2025-04-04 12:13:49,871 - websockets.server - DEBUG - > TEXT '{"status": "success", "message": "Access grante...lShrimali with Ishani"}' [83 bytes]
+2025-04-04 12:13:49,872 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:13:49,872 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:13:49,872 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:13:49,873 - websockets.server - DEBUG - > EOF
+2025-04-04 12:13:49,873 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:13:49,874 - websockets.server - DEBUG - < EOF
+2025-04-04 12:13:49,874 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:14:43,668 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:14:43,670 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:14:43,670 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:14:43,670 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:14:43,670 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:14:43,670 - websockets.server - DEBUG - < Sec-WebSocket-Key: FU3KSJACG0dFm9nsy5zBRQ==
+2025-04-04 12:14:43,671 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:14:43,671 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:14:43,671 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:14:43,671 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:14:43,671 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:44:43 GMT
+2025-04-04 12:14:43,671 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:14:43,672 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:14:43,672 - websockets.server - DEBUG - > Sec-WebSocket-Accept: wlOtaqlx0ildn7qpXK0lC2H7Mp0=
+2025-04-04 12:14:43,672 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:14:43,672 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:14:43,672 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:14:43,672 - websockets.server - INFO - connection open
+2025-04-04 12:14:43,673 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:14:43,677 - websockets.server - DEBUG - < TEXT '{"type": "registration", "image": "/9j/4AAQSkZJ...Om", "role": "Patient"}' [26258 bytes]
+2025-04-04 12:14:43,677 - FaceAuthServer - INFO - Received message type: registration
+2025-04-04 12:14:43,677 - FaceAuthServer - DEBUG - Processing registration request
+2025-04-04 12:14:43,677 - FaceAuthServer - INFO - Processing registration request
+2025-04-04 12:14:43,677 - FaceAuthServer - DEBUG - Converting base64 to image
+2025-04-04 12:14:43,678 - FaceAuthServer - DEBUG - Image decoded successfully: (225, 194, 3)
+2025-04-04 12:14:43,678 - FaceAuthServer - DEBUG - Saving image to: faceDB\PATIENTS\PAT_003_Om.jpg
+2025-04-04 12:14:43,678 - FaceAuthServer - DEBUG - Logging authentication: PAT_003 -> None, register, New Patient registered: Om
+2025-04-04 12:14:43,681 - FaceAuthServer - ERROR - Error logging authentication: 1048 (23000): Column 'patient_id' cannot be null
+2025-04-04 12:14:43,685 - FaceAuthServer - INFO - Registration successful: PAT_003
+2025-04-04 12:14:43,685 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'message': 'Successfully registered as Patient with ID: PAT_003'}
+2025-04-04 12:14:43,685 - websockets.server - DEBUG - > TEXT '{"status": "success", "message": "Successfully ...ient with ID: PAT_003"}' [87 bytes]
+2025-04-04 12:14:43,687 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:14:43,687 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:14:43,687 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:14:43,687 - websockets.server - DEBUG - > EOF
+2025-04-04 12:14:43,687 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:14:43,688 - websockets.server - DEBUG - < EOF
+2025-04-04 12:14:43,688 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:15:16,968 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:15:16,971 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:15:16,971 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:15:16,971 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:15:16,972 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:15:16,972 - websockets.server - DEBUG - < Sec-WebSocket-Key: ddW0eVDs+a5vglQrkSNolQ==
+2025-04-04 12:15:16,972 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:15:16,972 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:15:16,972 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:15:16,972 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:15:16,973 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:45:16 GMT
+2025-04-04 12:15:16,973 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:15:16,973 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:15:16,973 - websockets.server - DEBUG - > Sec-WebSocket-Accept: D6I9JIgObqu2N/2SWxkidxj10Gc=
+2025-04-04 12:15:16,973 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:15:16,973 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:15:16,974 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:15:16,974 - websockets.server - INFO - connection open
+2025-04-04 12:15:16,974 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:15:16,976 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:15:16,976 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:15:16,977 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:15:16,977 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:15:16,977 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:15:16,977 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:15:16,977 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:15:16,978 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:15:16,978 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:15:16,979 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:15:16,979 - websockets.server - DEBUG - > EOF
+2025-04-04 12:15:16,979 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:15:16,980 - websockets.server - DEBUG - < EOF
+2025-04-04 12:15:16,980 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:15:16,982 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:15:16,983 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:15:16,983 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:15:16,984 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:15:16,984 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:15:16,984 - websockets.server - DEBUG - < Sec-WebSocket-Key: VlGNJkOR5Idowwf8YakVZw==
+2025-04-04 12:15:16,984 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:15:16,984 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:15:16,984 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:15:16,985 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:15:16,985 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:45:16 GMT
+2025-04-04 12:15:16,985 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:15:16,985 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:15:16,985 - websockets.server - DEBUG - > Sec-WebSocket-Accept: xu0YZ0PmEgD8uIiBRcgcGhTRkkk=
+2025-04-04 12:15:16,985 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:15:16,986 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:15:16,986 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:15:16,986 - websockets.server - INFO - connection open
+2025-04-04 12:15:16,987 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:15:16,988 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:15:16,988 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:15:16,988 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:15:16,989 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:15:16,989 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:15:16,989 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:15:16,989 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:15:16,990 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:15:16,990 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:15:16,990 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:15:16,990 - websockets.server - DEBUG - > EOF
+2025-04-04 12:15:16,991 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:15:16,991 - websockets.server - DEBUG - < EOF
+2025-04-04 12:15:16,992 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:17:02,175 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:17:02,180 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:17:02,180 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - < Sec-WebSocket-Key: jJZSC312S2lxd0CDmpPd/w==
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:47:02 GMT
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:17:02,181 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:17:02,182 - websockets.server - DEBUG - > Sec-WebSocket-Accept: KMC+ozDLIGabutyTg36nEa1SrSA=
+2025-04-04 12:17:02,182 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:17:02,182 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:17:02,182 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:17:02,183 - websockets.server - INFO - connection open
+2025-04-04 12:17:02,183 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:17:02,183 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:17:02,183 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:17:02,183 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:17:02,183 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:17:02,183 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - > EOF
+2025-04-04 12:17:02,183 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:17:02,187 - websockets.server - DEBUG - < EOF
+2025-04-04 12:17:02,187 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:17:02,188 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < Sec-WebSocket-Key: l4JTwrhvlUe610WLKmWBlA==
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:47:02 GMT
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > Sec-WebSocket-Accept: QeQlUuRhsa+tNEYUKX47FvHlehQ=
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:17:02,189 - websockets.server - INFO - connection open
+2025-04-04 12:17:02,189 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:17:02,189 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:17:02,189 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:17:02,189 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:17:02,189 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:17:02,189 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:17:02,189 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:17:02,195 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:17:02,195 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:17:02,196 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:17:02,196 - websockets.server - DEBUG - > EOF
+2025-04-04 12:17:02,196 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:17:02,196 - websockets.server - DEBUG - < EOF
+2025-04-04 12:17:02,196 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:22:48,330 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:22:48,330 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:22:48,330 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:22:48,330 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:22:48,336 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:22:48,352 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:22:48,352 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:22:48,368 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:22:48,368 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:22:48,368 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:22:55,554 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:22:55,557 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:22:55,557 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:22:55,557 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:22:55,557 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:22:55,557 - websockets.server - DEBUG - < Sec-WebSocket-Key: iWFHhQAtcOAybrfSpDfrQg==
+2025-04-04 12:22:55,558 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:22:55,558 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:22:55,558 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:22:55,559 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:22:55,559 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:52:55 GMT
+2025-04-04 12:22:55,559 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:22:55,559 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:22:55,559 - websockets.server - DEBUG - > Sec-WebSocket-Accept: pgR6Z093EbZfRMH2SNiJ6v+Ppxo=
+2025-04-04 12:22:55,560 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:22:55,560 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:22:55,560 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:22:55,560 - websockets.server - INFO - connection open
+2025-04-04 12:22:55,560 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:22:55,562 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:22:55,563 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:22:55,563 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:22:55,563 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:22:55,563 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:22:55,563 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:22:55,563 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:22:55,564 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:22:55,565 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:22:55,565 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:22:55,565 - websockets.server - DEBUG - > EOF
+2025-04-04 12:22:55,565 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:22:55,566 - websockets.server - DEBUG - < EOF
+2025-04-04 12:22:55,566 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:22:55,568 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:22:55,569 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:22:55,569 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - < Sec-WebSocket-Key: sP+7VgnvWw3fVMVNLAFdrA==
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:22:55,570 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:52:55 GMT
+2025-04-04 12:22:55,571 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:22:55,571 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:22:55,571 - websockets.server - DEBUG - > Sec-WebSocket-Accept: MLv3PNdO3xcZdoA0Z8ydqhNzYnA=
+2025-04-04 12:22:55,571 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:22:55,571 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:22:55,571 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:22:55,571 - websockets.server - INFO - connection open
+2025-04-04 12:22:55,571 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:22:55,573 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:22:55,573 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:22:55,574 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:22:55,574 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:22:55,574 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:22:55,574 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:22:55,574 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:22:55,575 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:22:55,575 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:22:55,575 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:22:55,576 - websockets.server - DEBUG - > EOF
+2025-04-04 12:22:55,576 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:22:55,576 - websockets.server - DEBUG - < EOF
+2025-04-04 12:22:55,577 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:25:10,792 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:25:10,794 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:25:10,794 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:25:10,794 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - < Sec-WebSocket-Key: oWNNQOa81s2ODbhFXP38SQ==
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:55:10 GMT
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:25:10,795 - websockets.server - DEBUG - > Sec-WebSocket-Accept: jAYkmAvMbyKtwzRnWxPKvxjSeGQ=
+2025-04-04 12:25:10,796 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:25:10,796 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:25:10,796 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:25:10,796 - websockets.server - INFO - connection open
+2025-04-04 12:25:10,796 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:25:10,797 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:25:10,797 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:25:10,798 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:25:10,798 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:25:10,798 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:25:10,798 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:25:10,798 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:25:10,798 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:25:10,799 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:25:10,799 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:25:10,799 - websockets.server - DEBUG - > EOF
+2025-04-04 12:25:10,799 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:25:10,800 - websockets.server - DEBUG - < EOF
+2025-04-04 12:25:10,800 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:25:10,801 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:25:10,803 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:25:10,803 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:25:10,803 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - < Sec-WebSocket-Key: rAuLRWMgJdgrvRMMLEYgvg==
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:55:10 GMT
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > Sec-WebSocket-Accept: ARmz38k5XDGfYQzwqjOiqHY44Jg=
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:25:10,804 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:25:10,804 - websockets.server - INFO - connection open
+2025-04-04 12:25:10,804 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:25:10,806 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:25:10,806 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:25:10,806 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:25:10,806 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:25:10,807 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:25:10,807 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:25:10,807 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:25:10,808 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:25:10,808 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:25:10,808 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:25:10,808 - websockets.server - DEBUG - > EOF
+2025-04-04 12:25:10,808 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:25:10,809 - websockets.server - DEBUG - < EOF
+2025-04-04 12:25:10,809 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:25:19,818 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:25:19,821 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:25:19,821 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:25:19,821 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:25:19,822 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:25:19,822 - websockets.server - DEBUG - < Sec-WebSocket-Key: 49U6NCJXEN5pIRtsXiNQlg==
+2025-04-04 12:25:19,822 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:25:19,823 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:25:19,823 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:25:19,823 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:25:19,823 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 06:55:19 GMT
+2025-04-04 12:25:19,824 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:25:19,824 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:25:19,824 - websockets.server - DEBUG - > Sec-WebSocket-Accept: ZE4m+iTQu3SI8+zcSA/4RZlsH1E=
+2025-04-04 12:25:19,824 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:25:19,824 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:25:19,825 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:25:19,825 - websockets.server - INFO - connection open
+2025-04-04 12:25:19,825 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:25:19,827 - websockets.server - DEBUG - < TEXT '{"type": "create_access", "doctor_id": "DOC_003...ss_date": "2025-04-04"}' [103 bytes]
+2025-04-04 12:25:19,827 - FaceAuthServer - INFO - Received message type: create_access
+2025-04-04 12:25:19,827 - FaceAuthServer - DEBUG - Creating access entry
+2025-04-04 12:25:19,827 - FaceAuthServer - INFO - Creating access entry
+2025-04-04 12:25:19,832 - FaceAuthServer - ERROR - Error creating access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'
+2025-04-04 12:25:19,834 - FaceAuthServer - DEBUG - Sending response: {'status': 'error', 'message': "Failed to create access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'"}
+2025-04-04 12:25:19,834 - websockets.server - DEBUG - > TEXT '{"status": "error", "message": "Failed to creat...e\' in \'field list\'"}' [122 bytes]
+2025-04-04 12:25:19,836 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:25:19,836 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:25:19,836 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:25:19,836 - websockets.server - DEBUG - > EOF
+2025-04-04 12:25:19,837 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:25:19,837 - websockets.server - DEBUG - < EOF
+2025-04-04 12:25:19,837 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:29:52,650 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:29:52,650 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:29:52,660 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:29:52,660 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:29:52,660 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:29:52,671 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:29:52,679 - FaceAuthServer - INFO - Database tables created/updated successfully
+2025-04-04 12:29:52,679 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:29:52,693 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:29:52,693 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:29:52,693 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < Sec-WebSocket-Key: CNDaXTcOaB3kLa27WhYpiQ==
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:30:02,309 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:00:02 GMT
+2025-04-04 12:30:02,315 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:30:02,315 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:30:02,315 - websockets.server - DEBUG - > Sec-WebSocket-Accept: LHIOgttQiJBq1P1VDZ2+loyem24=
+2025-04-04 12:30:02,315 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:30:02,315 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:30:02,315 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:30:02,315 - websockets.server - INFO - connection open
+2025-04-04 12:30:02,315 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:30:02,317 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:30:02,317 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:30:02,317 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:30:02,317 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:30:02,317 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:30:02,317 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:30:02,318 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:30:02,319 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:30:02,319 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:30:02,319 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:30:02,319 - websockets.server - DEBUG - > EOF
+2025-04-04 12:30:02,319 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:30:02,320 - websockets.server - DEBUG - < EOF
+2025-04-04 12:30:02,320 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:30:02,321 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < Sec-WebSocket-Key: kXDd8oZO20LZiGM428fqjQ==
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:30:02,323 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:00:02 GMT
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - > Sec-WebSocket-Accept: rJcEQ4+dcDur3XoHvFqMc5S7qkE=
+2025-04-04 12:30:02,324 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:30:02,325 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:30:02,325 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:30:02,325 - websockets.server - INFO - connection open
+2025-04-04 12:30:02,326 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:30:02,326 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:30:02,327 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:30:02,327 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:30:02,327 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:30:02,327 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:30:02,327 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:30:02,327 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:30:02,329 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:30:02,329 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:30:02,329 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:30:02,329 - websockets.server - DEBUG - > EOF
+2025-04-04 12:30:02,329 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:30:02,330 - websockets.server - DEBUG - < EOF
+2025-04-04 12:30:02,330 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:30:12,171 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:30:12,173 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:30:12,173 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:30:12,173 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:30:12,173 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:30:12,173 - websockets.server - DEBUG - < Sec-WebSocket-Key: dNd8JOuR2QyAqUOZTYoojg==
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:00:12 GMT
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:30:12,174 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:30:12,175 - websockets.server - DEBUG - > Sec-WebSocket-Accept: oeB8CAMvk8SDFyrSE9leJwqykok=
+2025-04-04 12:30:12,175 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:30:12,175 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:30:12,175 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:30:12,175 - websockets.server - INFO - connection open
+2025-04-04 12:30:12,175 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:30:12,177 - websockets.server - DEBUG - < TEXT '{"type": "create_access", "doctor_id": "DOC_003...visit_type": "regular"}' [128 bytes]
+2025-04-04 12:30:12,177 - FaceAuthServer - INFO - Received message type: create_access
+2025-04-04 12:30:12,177 - FaceAuthServer - DEBUG - Creating access entry
+2025-04-04 12:30:12,177 - FaceAuthServer - INFO - Creating access entry
+2025-04-04 12:30:12,179 - FaceAuthServer - ERROR - Error creating access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'
+2025-04-04 12:30:12,180 - FaceAuthServer - DEBUG - Sending response: {'status': 'error', 'message': "Failed to create access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'"}
+2025-04-04 12:30:12,180 - websockets.server - DEBUG - > TEXT '{"status": "error", "message": "Failed to creat...e\' in \'field list\'"}' [122 bytes]
+2025-04-04 12:30:12,181 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:30:12,182 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:30:12,182 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:30:12,182 - websockets.server - DEBUG - > EOF
+2025-04-04 12:30:12,182 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:30:12,183 - websockets.server - DEBUG - < EOF
+2025-04-04 12:30:12,183 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:33:30,564 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:33:30,564 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:33:30,564 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:33:30,564 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:33:30,564 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:33:30,582 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:33:30,585 - FaceAuthServer - INFO - Database tables checked/created successfully
+2025-04-04 12:33:30,585 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:33:30,598 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:33:30,599 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:33:30,599 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:33:31,804 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < Sec-WebSocket-Key: I2pmRqMVRJx2UwOh2SN/0Q==
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:33:31,805 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:03:31 GMT
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - > Sec-WebSocket-Accept: YB/uiz89UGfImILeojagSr9AbuU=
+2025-04-04 12:33:31,807 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:33:31,808 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:33:31,808 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:33:31,808 - websockets.server - INFO - connection open
+2025-04-04 12:33:31,808 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:33:31,809 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:33:31,809 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:33:31,809 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:33:31,809 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:33:31,809 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:33:31,809 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:33:31,810 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:33:31,810 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:33:31,811 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:33:31,811 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:33:31,812 - websockets.server - DEBUG - > EOF
+2025-04-04 12:33:31,812 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:33:31,812 - websockets.server - DEBUG - < EOF
+2025-04-04 12:33:31,813 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:33:31,814 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:33:31,815 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:33:31,815 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:33:31,815 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:33:31,815 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - < Sec-WebSocket-Key: t3NTXYH1mZSjIabkiph5pQ==
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:03:31 GMT
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:33:31,816 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:33:31,817 - websockets.server - DEBUG - > Sec-WebSocket-Accept: Y7yzkB5W5V8AAfB5ZUz2JVNw20g=
+2025-04-04 12:33:31,817 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:33:31,817 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:33:31,817 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:33:31,817 - websockets.server - INFO - connection open
+2025-04-04 12:33:31,817 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:33:31,818 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:33:31,819 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:33:31,819 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:33:31,819 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:33:31,819 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:33:31,819 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:33:31,819 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:33:31,820 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:33:31,820 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:33:31,820 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:33:31,820 - websockets.server - DEBUG - > EOF
+2025-04-04 12:33:31,821 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:33:31,821 - websockets.server - DEBUG - < EOF
+2025-04-04 12:33:31,821 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:33:41,766 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:33:41,768 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:33:41,768 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:33:41,768 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:33:41,768 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:33:41,768 - websockets.server - DEBUG - < Sec-WebSocket-Key: bP3RU76yGxvGsIc9EJqJYQ==
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:03:41 GMT
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:33:41,769 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:33:41,770 - websockets.server - DEBUG - > Sec-WebSocket-Accept: jR0F8bNySyXc5fx61f2QgnTFpiw=
+2025-04-04 12:33:41,770 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:33:41,770 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:33:41,770 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:33:41,770 - websockets.server - INFO - connection open
+2025-04-04 12:33:41,770 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:33:41,772 - websockets.server - DEBUG - < TEXT '{"type": "create_access", "doctor_id": "DOC_003...visit_type": "regular"}' [128 bytes]
+2025-04-04 12:33:41,772 - FaceAuthServer - INFO - Received message type: create_access
+2025-04-04 12:33:41,773 - FaceAuthServer - DEBUG - Creating access entry
+2025-04-04 12:33:41,773 - FaceAuthServer - INFO - Creating access entry
+2025-04-04 12:33:41,774 - FaceAuthServer - ERROR - Error creating access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'
+2025-04-04 12:33:41,776 - FaceAuthServer - DEBUG - Sending response: {'status': 'error', 'message': "Failed to create access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'"}
+2025-04-04 12:33:41,776 - websockets.server - DEBUG - > TEXT '{"status": "error", "message": "Failed to creat...e\' in \'field list\'"}' [122 bytes]
+2025-04-04 12:33:41,778 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:33:41,778 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:33:41,778 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:33:41,779 - websockets.server - DEBUG - > EOF
+2025-04-04 12:33:41,779 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:33:41,779 - websockets.server - DEBUG - < EOF
+2025-04-04 12:33:41,779 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:36:00,303 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:36:00,303 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:36:00,304 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:36:00,304 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:36:00,305 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:36:00,310 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:36:00,318 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:36:00,320 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:36:00,333 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:36:00,333 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:36:00,333 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:36:13,587 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:36:13,590 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:36:13,590 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:36:13,590 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:36:13,590 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:36:13,590 - websockets.server - DEBUG - < Sec-WebSocket-Key: GCOAhby2VhgeCmly1rgr3Q==
+2025-04-04 12:36:13,591 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:36:13,591 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:36:13,591 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:13,591 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:36:13,592 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:06:13 GMT
+2025-04-04 12:36:13,592 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:36:13,592 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:36:13,592 - websockets.server - DEBUG - > Sec-WebSocket-Accept: iJo5eZp/ZSXReXnpOBiKQt6LPA4=
+2025-04-04 12:36:13,592 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:36:13,592 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:13,593 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:36:13,593 - websockets.server - INFO - connection open
+2025-04-04 12:36:13,594 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:36:13,594 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:36:13,594 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:36:13,594 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:36:13,594 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:36:13,594 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:36:13,594 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:36:13,594 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:36:13,599 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:13,599 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:13,599 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:36:13,599 - websockets.server - DEBUG - > EOF
+2025-04-04 12:36:13,600 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:36:13,601 - websockets.server - DEBUG - < EOF
+2025-04-04 12:36:13,601 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < Sec-WebSocket-Key: pleMOE0E1n3eAabTXeAdIw==
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:06:13 GMT
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > Sec-WebSocket-Accept: UDsVsFaEis6kOwhRT09xItcuQso=
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:13,602 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:36:13,602 - websockets.server - INFO - connection open
+2025-04-04 12:36:13,602 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:36:13,608 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:36:13,608 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:36:13,608 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:36:13,608 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:36:13,608 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:36:13,608 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:36:13,608 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:36:13,611 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:13,612 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:13,612 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:36:13,612 - websockets.server - DEBUG - > EOF
+2025-04-04 12:36:13,612 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:36:13,612 - websockets.server - DEBUG - < EOF
+2025-04-04 12:36:13,613 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:36:21,740 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < Sec-WebSocket-Key: QSs1s1y/C9h5EaS3C4rA7Q==
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:36:21,741 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:21,742 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:36:21,742 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:06:21 GMT
+2025-04-04 12:36:21,742 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:36:21,742 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:36:21,742 - websockets.server - DEBUG - > Sec-WebSocket-Accept: /2+tmxIDvIIX572fA4C6qufacVE=
+2025-04-04 12:36:21,742 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:36:21,743 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:21,743 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:36:21,743 - websockets.server - INFO - connection open
+2025-04-04 12:36:21,743 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:36:21,744 - websockets.server - DEBUG - < TEXT '{"type": "create_access", "doctor_id": "DOC_003...visit_type": "regular"}' [128 bytes]
+2025-04-04 12:36:21,744 - FaceAuthServer - INFO - Received message type: create_access
+2025-04-04 12:36:21,744 - FaceAuthServer - DEBUG - Creating access entry
+2025-04-04 12:36:21,745 - FaceAuthServer - INFO - Creating access entry
+2025-04-04 12:36:21,746 - FaceAuthServer - ERROR - Error creating access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'
+2025-04-04 12:36:21,748 - FaceAuthServer - DEBUG - Sending response: {'status': 'error', 'message': "Failed to create access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'"}
+2025-04-04 12:36:21,748 - websockets.server - DEBUG - > TEXT '{"status": "error", "message": "Failed to creat...e\' in \'field list\'"}' [122 bytes]
+2025-04-04 12:36:21,750 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:21,750 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:21,750 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:36:21,750 - websockets.server - DEBUG - > EOF
+2025-04-04 12:36:21,750 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:36:21,751 - websockets.server - DEBUG - < EOF
+2025-04-04 12:36:21,751 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:36:24,512 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:36:24,514 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:36:24,514 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:36:24,514 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:36:24,514 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:36:24,515 - websockets.server - DEBUG - < Sec-WebSocket-Key: lNvlhRVB23bzXtW114Uu7w==
+2025-04-04 12:36:24,515 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:36:24,515 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:36:24,515 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:06:24 GMT
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > Sec-WebSocket-Accept: WJGl5taHWbicD6e3pEvBaVOW0sw=
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:36:24,516 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:36:24,516 - websockets.server - INFO - connection open
+2025-04-04 12:36:24,517 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:36:24,519 - websockets.server - DEBUG - < TEXT '{"type": "create_access", "doctor_id": "DOC_003...visit_type": "regular"}' [128 bytes]
+2025-04-04 12:36:24,519 - FaceAuthServer - INFO - Received message type: create_access
+2025-04-04 12:36:24,519 - FaceAuthServer - DEBUG - Creating access entry
+2025-04-04 12:36:24,519 - FaceAuthServer - INFO - Creating access entry
+2025-04-04 12:36:24,520 - FaceAuthServer - ERROR - Error creating access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'
+2025-04-04 12:36:24,521 - FaceAuthServer - DEBUG - Sending response: {'status': 'error', 'message': "Failed to create access entry: 1054 (42S22): Unknown column 'visit_type' in 'field list'"}
+2025-04-04 12:36:24,521 - websockets.server - DEBUG - > TEXT '{"status": "error", "message": "Failed to creat...e\' in \'field list\'"}' [122 bytes]
+2025-04-04 12:36:24,523 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:24,523 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:36:24,523 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:36:24,523 - websockets.server - DEBUG - > EOF
+2025-04-04 12:36:24,524 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:36:24,524 - websockets.server - DEBUG - < EOF
+2025-04-04 12:36:24,525 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:37:22,728 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:37:22,728 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:37:22,728 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:37:22,728 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:37:22,728 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:37:22,741 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:37:22,756 - FaceAuthServer - INFO - Added visit_type column to access_table
+2025-04-04 12:37:22,759 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:37:22,761 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:37:22,777 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:37:22,777 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:37:22,777 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:37:29,454 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:37:29,461 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < Sec-WebSocket-Key: M69LqYjSJz/l98pgGyAZbQ==
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:37:29,462 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:07:29 GMT
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > Sec-WebSocket-Accept: kb139GXsN+8Ttk2S2Hfj9zENpBw=
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:37:29,463 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:37:29,463 - websockets.server - INFO - connection open
+2025-04-04 12:37:29,464 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:37:29,465 - websockets.server - DEBUG - < TEXT '{"type": "get_doctors"}' [23 bytes]
+2025-04-04 12:37:29,465 - FaceAuthServer - INFO - Received message type: get_doctors
+2025-04-04 12:37:29,465 - FaceAuthServer - DEBUG - Getting doctors list
+2025-04-04 12:37:29,465 - FaceAuthServer - INFO - Getting doctors list
+2025-04-04 12:37:29,465 - FaceAuthServer - INFO - Found 3 doctors
+2025-04-04 12:37:29,465 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'doctors': [{'id': 'DOC_001', 'name': 'OmKharche'}, {'id': 'DOC_002', 'name': 'PrajwalShrimali'}, {'id': 'DOC_003', 'name': 'Ishani'}]}
+2025-04-04 12:37:29,466 - websockets.server - DEBUG - > TEXT '{"status": "success", "doctors": [{"id": "DOC_0...3", "name": "Ishani"}]}' [157 bytes]
+2025-04-04 12:37:29,467 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:37:29,467 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:37:29,467 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:37:29,467 - websockets.server - DEBUG - > EOF
+2025-04-04 12:37:29,467 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:37:29,468 - websockets.server - DEBUG - < EOF
+2025-04-04 12:37:29,468 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:37:29,470 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < Sec-WebSocket-Key: xjxLSQoHy3yrOPGxLXeAlw==
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:07:29 GMT
+2025-04-04 12:37:29,472 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:37:29,473 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:37:29,473 - websockets.server - DEBUG - > Sec-WebSocket-Accept: oFVxJdAo9Ma90nFz1xiRbkgHOK0=
+2025-04-04 12:37:29,473 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:37:29,473 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:37:29,473 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:37:29,473 - websockets.server - INFO - connection open
+2025-04-04 12:37:29,473 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:37:29,474 - websockets.server - DEBUG - < TEXT '{"type": "get_patients"}' [24 bytes]
+2025-04-04 12:37:29,475 - FaceAuthServer - INFO - Received message type: get_patients
+2025-04-04 12:37:29,475 - FaceAuthServer - DEBUG - Getting patients list
+2025-04-04 12:37:29,475 - FaceAuthServer - INFO - Getting patients list
+2025-04-04 12:37:29,475 - FaceAuthServer - INFO - Found 3 patients
+2025-04-04 12:37:29,475 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'patients': [{'id': 'PAT_001', 'name': 'Ishani'}, {'id': 'PAT_002', 'name': 'Prajwal'}, {'id': 'PAT_003', 'name': 'Om'}]}
+2025-04-04 12:37:29,475 - websockets.server - DEBUG - > TEXT '{"status": "success", "patients": [{"id": "PAT_...T_003", "name": "Om"}]}' [143 bytes]
+2025-04-04 12:37:29,476 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:37:29,476 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:37:29,476 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:37:29,476 - websockets.server - DEBUG - > EOF
+2025-04-04 12:37:29,477 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:37:29,478 - websockets.server - DEBUG - < EOF
+2025-04-04 12:37:29,478 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:37:38,203 - websockets.server - DEBUG - = connection is CONNECTING
+2025-04-04 12:37:38,206 - websockets.server - DEBUG - < GET / HTTP/1.1
+2025-04-04 12:37:38,206 - websockets.server - DEBUG - < Host: localhost:8765
+2025-04-04 12:37:38,206 - websockets.server - DEBUG - < Upgrade: websocket
+2025-04-04 12:37:38,206 - websockets.server - DEBUG - < Connection: Upgrade
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - < Sec-WebSocket-Key: DPK0ZqQb0EMymI2PZa8RdA==
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - < User-Agent: Python/3.9 websockets/15.0.1
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - > Date: Fri, 04 Apr 2025 07:07:38 GMT
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - > Upgrade: websocket
+2025-04-04 12:37:38,207 - websockets.server - DEBUG - > Connection: Upgrade
+2025-04-04 12:37:38,208 - websockets.server - DEBUG - > Sec-WebSocket-Accept: G+KGY1AzT+6oEjKP63uufSYoe2k=
+2025-04-04 12:37:38,208 - websockets.server - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-04-04 12:37:38,208 - websockets.server - DEBUG - > Server: Python/3.9 websockets/15.0.1
+2025-04-04 12:37:38,208 - websockets.server - DEBUG - = connection is OPEN
+2025-04-04 12:37:38,208 - websockets.server - INFO - connection open
+2025-04-04 12:37:38,208 - FaceAuthServer - INFO - New WebSocket connection established
+2025-04-04 12:37:38,210 - websockets.server - DEBUG - < TEXT '{"type": "create_access", "doctor_id": "DOC_003...visit_type": "regular"}' [128 bytes]
+2025-04-04 12:37:38,211 - FaceAuthServer - INFO - Received message type: create_access
+2025-04-04 12:37:38,211 - FaceAuthServer - DEBUG - Creating access entry
+2025-04-04 12:37:38,211 - FaceAuthServer - INFO - Creating access entry
+2025-04-04 12:37:38,216 - FaceAuthServer - DEBUG - Logging authentication: DOC_003 -> PAT_002, create_access, New access created for 2025-04-04
+2025-04-04 12:37:38,217 - FaceAuthServer - INFO - Authentication logged successfully
+2025-04-04 12:37:38,218 - FaceAuthServer - INFO - Access entry created successfully
+2025-04-04 12:37:38,218 - FaceAuthServer - DEBUG - Sending response: {'status': 'success', 'message': 'Access entry created successfully'}
+2025-04-04 12:37:38,218 - websockets.server - DEBUG - > TEXT '{"status": "success", "message": "Access entry created successfully"}' [69 bytes]
+2025-04-04 12:37:38,219 - websockets.server - DEBUG - < CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:37:38,219 - websockets.server - DEBUG - > CLOSE 1000 (OK) [2 bytes]
+2025-04-04 12:37:38,220 - websockets.server - DEBUG - = connection is CLOSING
+2025-04-04 12:37:38,220 - websockets.server - DEBUG - > EOF
+2025-04-04 12:37:38,220 - websockets.server - DEBUG - x half-closing TCP connection
+2025-04-04 12:37:38,221 - websockets.server - DEBUG - < EOF
+2025-04-04 12:37:38,221 - websockets.server - DEBUG - = connection is CLOSED
+2025-04-04 12:41:37,629 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:41:37,629 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:41:37,629 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:41:37,629 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:41:37,629 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:41:37,648 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:41:37,658 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:41:37,662 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:41:37,675 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:41:37,675 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:41:37,675 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:43:01,730 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:43:01,730 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:43:01,733 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:43:01,733 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:43:01,733 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:43:01,744 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:43:01,744 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:43:01,761 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:43:01,761 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:43:01,761 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:48:37,741 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:48:37,741 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:48:37,743 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:48:37,743 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:48:37,743 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:48:37,754 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:48:37,764 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:48:37,766 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:48:37,781 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:48:37,781 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:48:37,781 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:51:13,413 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:51:13,413 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:51:13,413 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:51:13,413 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:51:13,413 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:51:13,431 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:51:13,440 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:51:13,442 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:51:13,457 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:51:13,457 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:51:13,457 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:54:41,285 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:54:41,285 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:54:41,286 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:54:41,286 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:54:41,287 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:54:41,297 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:54:41,303 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:54:41,305 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:54:41,320 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:54:41,321 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:54:41,321 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:55:24,070 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:55:24,070 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:55:24,070 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:55:24,070 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:55:24,070 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:55:24,082 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:55:24,086 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:55:24,089 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:55:24,104 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:55:24,104 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:55:24,104 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 12:59:08,068 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 12:59:08,068 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 12:59:08,068 - FaceAuthServer - INFO - Initializing server
+2025-04-04 12:59:08,068 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 12:59:08,068 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 12:59:08,083 - FaceAuthServer - INFO - Database connection established
+2025-04-04 12:59:08,093 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 12:59:08,095 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 12:59:08,110 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 12:59:08,110 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 12:59:08,110 - FaceAuthServer - INFO - Server started on ws://localhost:8765
+2025-04-04 13:03:05,621 - FaceAuthServer - INFO - Starting Face Authentication Server
+2025-04-04 13:03:05,621 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-04-04 13:03:05,621 - FaceAuthServer - INFO - Initializing server
+2025-04-04 13:03:05,621 - FaceAuthServer - INFO - Initializing FaceAuthServer
+2025-04-04 13:03:05,621 - FaceAuthServer - DEBUG - Connecting to database: localhost:face_auth_db
+2025-04-04 13:03:05,638 - FaceAuthServer - INFO - Database connection established
+2025-04-04 13:03:05,650 - FaceAuthServer - ERROR - Error creating tables: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS idx_access_person ON access_table(person_id)' at line 1
+2025-04-04 13:03:05,652 - FaceAuthServer - INFO - Starting server on localhost:8765
+2025-04-04 13:03:05,665 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 13:03:05,665 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 13:03:05,665 - FaceAuthServer - INFO - Server started on ws://localhost:8765

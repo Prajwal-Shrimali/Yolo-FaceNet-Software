@@ -1,0 +1,14 @@
+.venv
+client
+server
+README.md
+Workspace.md
+.vscode
+.venv
+new_client/venv
+new_client/models
+new_client/__pycache__
+new_client/temp
+new_client/client_debug.log
+new_server/__pycache__
+new_server/server_debug.
